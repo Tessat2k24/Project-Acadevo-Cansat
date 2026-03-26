@@ -1,4 +1,4 @@
-// Updated serialReader.js
+// Updated serialReader.js (Scrubbed Version)
 const { SerialPort, ReadlineParser } = require("serialport");
 
 class SerialReader {
@@ -132,28 +132,6 @@ class SerialReader {
       gyro: { x: sensors.gyro.x, y: sensors.gyro.y, z: sensors.gyro.z },
     });
     if (data.historicalData.length > this.maxHist) data.historicalData.pop();
-
-    data.predictions = data.predictions || [];
-    const pred = {
-      timestamp: Date.now(),
-      temperature: {
-        predicted: sensors.temperature.value + (Math.random() - 0.5) * 0.5,
-        cansat: sensors.temperature.value,
-        ground: data.groundStation?.temperature ?? 0,
-      },
-      pressure: {
-        predicted: sensors.pressure.value + (Math.random() - 0.5) * 0.5,
-        cansat: sensors.pressure.value,
-        ground: data.groundStation?.pressure ?? 0,
-      },
-      voltage: {
-        predicted: battery.voltage + (Math.random() - 0.5) * 0.05,
-        cansat: battery.voltage,
-        ground: 12 + Math.random(),
-      },
-    };
-    data.predictions.unshift(pred);
-    if (data.predictions.length > this.maxHist) data.predictions.pop();
 
     Object.assign(data, {
       timestamp: now,

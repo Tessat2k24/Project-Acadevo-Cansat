@@ -208,5 +208,4 @@ const navigationItems = [
   { title: "Graphs", url: "/graphs", icon: FaChartLine },
   { title: "Map", url: "/map", icon: FaMap },
   { title: "Data", url: "/data", icon: FaDatabase },
-  //{ title: "Prediction", url: "/prediction", icon: FaBrain },
 ];
