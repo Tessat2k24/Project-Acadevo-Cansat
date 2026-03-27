@@ -76,15 +76,15 @@ export default function MissionSidebar({
         {!collapsed ? (
           <div className="flex items-center justify-center gap-4 mb-4">
             <img
-              src="/Logo1.png"
+              src="/Logo1.png" //Tessat logo
               className="w-14 h-14 object-contain"
               alt="Tessat"
             />
             <div className="h-12 w-px bg-gray-600" />
             <img
-              src="/img1.svg" //add your logo here
+              src="Acadevo_logo.jpg" //Acadevo logo
               className="w-14 h-14 object-contain"
-              alt="add logo"
+              alt="Acaddevo"
             />
           </div>
         ) : (
@@ -96,9 +96,9 @@ export default function MissionSidebar({
             />
             <div className="w-12 h-px bg-gray-600" />
             <img
-              src="/img1.svg" //add your logo here
+              src="Acadevo_logo.jpg" 
               className="w-14 h-14 object-contain"
-              alt="add logo"
+              alt="Acadevo"
             />
           </div>
         )}
