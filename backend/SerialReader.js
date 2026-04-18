@@ -4,7 +4,7 @@ const { SerialPort, ReadlineParser } = require("serialport");
 class SerialReader {
   constructor(dataGenerator, opts = {}) {
     this.dg = dataGenerator;
-    this.portPath = opts.portPath || "COM3";
+    this.portPath = opts.portPath || "COM18";
     this.baudRate = opts.baudRate || 9600;
     this.maxHist = opts.historicalMax || 100;
     this.port = null;

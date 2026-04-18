@@ -109,7 +109,7 @@ export default function MissionSidebar({
             <span className="text-gray-400 font-medium">Institute:</span>
             <span className="text-white">Acadevo Research Labs Pvt.Ltd</span>
             <span className="text-gray-400 font-medium">Mission:</span>
-            <span className="text-white">Temp</span>
+            <span className="text-white">Temporary</span>
           </div>
         )}
       </div>

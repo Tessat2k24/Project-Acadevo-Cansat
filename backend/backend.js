@@ -29,7 +29,7 @@ app.get("/api/data", (req, res) => {
 });
 
 // Start serial reading
-const port = new SerialPort({ path: "COM3", baudRate: 9600 });
+const port = new SerialPort({ path: "COM18", baudRate: 9600 });
 const parser = port.pipe(new ReadlineParser({ delimiter: "\n" }));
 
 parser.on("data", (line) => {
