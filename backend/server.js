@@ -85,7 +85,7 @@ function logToCSV(dataObj) {
 }
 
 // --- Serial Port (LoRa Receiver) ---
-const serialPort = new SerialPort({ path: "COM17", baudRate: 115200 });
+const serialPort = new SerialPort({ path: "COM18", baudRate: 115200 });
 const parser = serialPort.pipe(new ReadlineParser({ delimiter: "\n" }));
 
 parser.on("data", (line) => {
@@ -163,5 +163,5 @@ parser.on("data", (line) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Backend on http://localhost:${PORT} (HARDWARE MODE: LoRa on COM17)`);
+  console.log(`Backend on http://localhost:${PORT} (HARDWARE MODE: LoRa on COM18)`);
 });
